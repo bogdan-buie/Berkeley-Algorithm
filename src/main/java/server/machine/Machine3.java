@@ -10,9 +10,7 @@ import common.AppConstants;
 import server.ServerTime;
 import server.ServerTimeImpl;
 
-/**
- * Representação da máquina 3 para ter sua hora ajustada.
- */
+
 public class Machine3 {
 
 	public static void main(String[] args) {
@@ -21,7 +19,7 @@ public class Machine3 {
 			ServerTime machineServer = new ServerTimeImpl(hour);
 			Registry registry = LocateRegistry.createRegistry(AppConstants.SERVER_PORT_3);
 			registry.rebind(ServerTimeImpl.class.getSimpleName(), machineServer);
-			System.out.println(String.format("Máquina 3 iniciada na porta %s [hora local: %s].",
+			System.out.println(String.format("Masina 3 a fost pornita pe portul %s [Ora locala este: %s].",
 					AppConstants.SERVER_PORT_3,
 					AppConstants.formatter.format(hour)));
 		} catch (Exception ex) {
